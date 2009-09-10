@@ -1,0 +1,15 @@
+JSObjects TODO
+
+Low priority
+1 - Fix header positioning on scroll for Internet Explorer
+
+Super required feature: KEY BINDINGS!!!
+
+Missing Objects (by priority)
+1 - JsCalendarView (will have 4 display types: daily, weekly, monthly and yearly)
+
+CHECK THIS!!!
+http://home.t-online.de/home/lutz.tautenhahn/diagram/ <- JS charts
+
+JsWindow
+http://www.brainjar.com/dhtml/windows/demo.html

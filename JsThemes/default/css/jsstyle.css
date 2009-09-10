@@ -1,0 +1,744 @@
+	/******************************************************************
+	JsWebGets - Web User Interface Library
+	Copyright (C) 2006  Pablo Santiago Sanchez
+
+	This library is free software; you can redistribute it and/or
+	modify it under the terms of the GNU Lesser General Public
+	License as published by the Free Software Foundation; either
+	version 2.1 of the License, or (at your option) any later version.
+
+	This library is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+	Lesser General Public License for more details.
+
+	You should have received a copy of the GNU Lesser General Public
+	License along with this library; if not, write to the Free Software
+	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
+	******************************************************************/
+
+	/******************************************************************
+
+	The CSS is for colors and fonts only. Do not change
+	anything else or you may have some odd behaviours
+	from the widgets
+
+	******************************************************************/
+	.jsapplication
+	{
+		background-color: #FFFFFF;
+		margin: 0px;
+		overflow: hidden;
+	}
+
+	.jsrichtext
+	{
+		background-color: #FFFFFF;
+	}
+
+	.jsboxbuttonitem
+	{
+		border-top: 1px solid #FFFFFF;
+		border-bottom: 1px solid #FFFFFF;
+		border-left: 1px solid #FFFFFF;
+		border-right: 1px solid #FFFFFF;
+		cursor: default;
+	}
+
+	.jsboxbuttonitemover
+	{
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #333333;
+		cursor: default;
+	}
+
+	.jsboxbuttonitemmousedown
+	{
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #EEEEEE;
+		border-left: 1px solid #333333;
+		border-right: 1px solid #EEEEEE;
+		cursor: default;
+	}
+
+	.jsboxbuttonitemselected
+	{
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #EEEEEE;
+		border-left: 1px solid #333333;
+		border-right: 1px solid #EEEEEE;
+		background-color: #EEEEEE;
+		cursor: default;
+	}
+
+	.jstoolbox
+	{
+		background-color: #DDDDDD;
+	}
+
+	.jsbox
+	{
+		background-color: #DDDDDD;
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #000000;
+	}
+
+	.jsboxlabel
+	{
+		color: #000000;
+	}
+
+	.jsboxselected
+	{
+		background-color: #FFFFFF;
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #000000;
+	}
+
+	.jsdock
+	{
+		background-color: #BBBBBB;
+	}
+
+	.jsdockarea
+	{
+		background-color: #BBBBBB;
+	}
+
+	.jsdockhandler
+	{
+		background-color: #CCCCCC;
+		border-top: 1px solid #EEEEEE;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #000000;
+		border-bottom: 1px solid #000000;
+	}
+
+	.jswindow
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		cursor: default;
+		color: #000000;
+		background-color: #DDDDDD;
+		border-top: 1px solid #EEEEEE;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #000000;
+		border-bottom: 1px solid #000000;
+	}
+
+	.jswindowtitle
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		font-weight: bold;
+		cursor: move;
+		color: #FFFFFF;
+		background-color: #000066;
+		border-bottom: 1px solid #EEEEEE;
+		border-right: 1px solid #EEEEEE;
+		border-left: 1px solid #000000;
+		border-top: 1px solid #000000;
+	}
+
+	.jsdockedwindowtitle
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		font-weight: bold;
+		color: #FFFFFF;
+		background-color: #555555;
+		border-bottom: 1px solid #EEEEEE;
+		border-right: 1px solid #EEEEEE;
+		border-left: 1px solid #000000;
+		border-top: 1px solid #000000;
+	}
+
+	.jswindowarea
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		cursor: default;
+		color: #000000;
+		background-color: #FFFFFF;
+		border-bottom: 1px solid #EEEEEE;
+		border-right: 1px solid #EEEEEE;
+		border-left: 1px solid #000000;
+		border-top: 1px solid #000000;
+	}
+
+	.textareacontainer
+	{
+		border: 1px solid #7f7f7f;
+		background-color: #FFFFFF;
+	}
+
+	textarea
+	{
+		border: 0px solid #FFFFFF;
+		background-color: #FFFFFF;
+	}
+
+	.jswarning
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 12px;
+		background-color: #0000FF;
+		color: #FFFFFF;
+		height: 18px;
+		width: 100px;
+	}
+
+	.jswarningblock
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 12px;
+		background-color: #FFFFFF;
+		color: #FFFFFF;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		opacity: 0.1;
+		filter: alpha(opacity=10);
+	}
+	.jsradiohorizontal
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+	}
+
+	.jsgrid
+	{
+		border-collapse: collapse;
+		color:#000000;
+	}
+
+	.jsgridcell
+	{
+	}
+
+	.jslv
+	{
+		border: 1px solid #7f7f7f;
+		background-color: #FFFFFF;
+	}
+
+	.jslvheaderdiv
+	{
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #333333;
+		background-color: #DDDDDD;
+	}
+
+	.jslvheadercell
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		position:relative;
+		font-size: 10px;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #000000;
+		background-color: #DDDDDD;
+	}
+
+	.jslvitemdiv
+	{
+	}
+
+	.jslvitensdiv
+	{
+	}
+
+	.jslvbodydiv
+	{
+	}
+
+	.jslvitemcelldiv
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		border-left: 1px solid #FFFFFF;
+		border-right: 1px solid #EEEEEE;
+		border-bottom: 1px solid #EEEEEE;
+		color:#000000;
+	}
+
+	.jslvitemcelldivselected
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		background-color: #000066;
+		border-left: 1px solid #000066;
+		border-right: 1px solid #EEEEEE;
+		border-bottom: 1px solid #EEEEEE;
+		color: #FFFFFF;
+	}
+
+	.jslvitemcelldivmarked
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		background-color: #000099;
+		border-left: 1px solid #000066;
+		border-right: 1px solid #EEEEEE;
+		border-bottom: 1px solid #EEEEEE;
+		color: #FFFFFF;
+	}
+
+	.jslvitemcelldivgragover
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		background-color: #BBDDFF;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #EEEEEE;
+		border-bottom: 1px solid #EEEEEE;
+		color: #000000;
+	}
+
+	.jsmenubar
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #333333;
+		background-color: #DDDDDD;
+		color: #000000;
+		cursor:default;
+	}
+
+	.jsmenubaritem
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		background-color: #DDDDDD;
+		color: #000000;
+		cursor: default;
+	}
+
+	.jsmenubaritemover
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		background-color: #000066;
+		color: #FFFFFF;
+		cursor: default;
+	}
+
+	.jsmenu
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		border-top: 1px solid #CCCCCC;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #CCCCCC;
+		border-right: 1px solid #333333;
+		background-color:  #FFFFFF;
+		color:  #000000;
+		cursor:default;
+	}
+
+	.jsmenuitem
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		background-color:  #FFFFFF;
+		color:  #000000;
+		cursor:default;
+	}
+
+	.jsmenuitemover
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		background-color: #000066;
+		color: #FFFFFF;
+		cursor:default;
+	}
+
+	.jstoolbar
+	{
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #333333;
+		background-color: #DDDDDD;
+		color: #000000;
+		cursor:default;
+	}
+
+	.jstoolbardiv
+	{
+		width:10px;
+		height:34px;
+	}
+
+	.jstoolbaritem
+	{
+		border-top: 1px solid #DDDDDD;
+		border-bottom: 1px solid #DDDDDD;
+		border-left: 1px solid #DDDDDD;
+		border-right: 1px solid #DDDDDD;
+		cursor: default;
+		text-align: center;
+		width:34px;
+		height:34px;
+	}
+
+	.jstoolbaritemblankdiv
+	{
+		width:5px;
+		height:34px;
+	}
+
+	.jstoolbaritemover
+	{
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #333333;
+		cursor: default;
+		width:34px;
+		height:34px;
+	}
+
+	.jstoolbaritemmousedown
+	{
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #EEEEEE;
+		border-left: 1px solid #333333;
+		border-right: 1px solid #EEEEEE;
+		cursor: default;
+		width:34px;
+		height:34px;
+	}
+
+	.jsminitoolbar
+	{
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #333333;
+		background-color: #DDDDDD;
+		color: #000000;
+		cursor:default;
+	}
+
+	.jsminitoolbardiv
+	{
+		width:6px;
+		height:12px;
+		float: left;
+	}
+
+	.jsminitoolbaritem
+	{
+		border-top: 1px solid #DDDDDD;
+		border-bottom: 1px solid #DDDDDD;
+		border-left: 1px solid #DDDDDD;
+		border-right: 1px solid #DDDDDD;
+		width:18px;
+		height:18px;
+		cursor: default;
+	}
+
+	.jsminitoolbaritemblankdiv
+	{
+		width:4px;
+		height:12px;
+	}
+
+	.jsminitoolbaritemover
+	{
+		border-top: 1px solid #EEEEEE;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #333333;
+		cursor: default;
+		width:18px;
+		height:18px;
+	}
+
+	.jsminitoolbaritemmousedown
+	{
+		border-top: 1px solid #333333;
+		border-bottom: 1px solid #EEEEEE;
+		border-left: 1px solid #333333;
+		border-right: 1px solid #EEEEEE;
+		cursor: default;
+		width:18px;
+		height:18px;
+	}
+
+	.jsicon
+	{
+		cursor: pointer;
+		width: 34px;
+	}
+
+	.jscalendarOutput
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		white-space: nowrap;
+		border-right: 1px solid #333333;
+		border-bottom: 1px solid #333333;
+		border-left: 1px solid #EEEEEE;
+		border-top: 1px solid #EEEEEE;
+		background-color: #DDDDDD;
+	 	padding: 0px;
+	}
+
+	.jscalendarTable
+	{
+		table-layout: fixed;
+		padding: 0px;
+		border-spacing: 0px;
+		margin: 0px;
+		border-collapse: collapse;
+		background-color: #FFFFFF;
+	}
+
+	.jscalendarMonthCell
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		color: #FFFFFF;
+		font-size: 10px;
+		font-weight: bold;
+		white-space: nowrap;
+		background-color: #000055;
+		padding: 3;
+	}
+
+	.jscalendarWeekCell
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+
+		font-size: 10px;
+		font-weight: bold;
+		white-space: nowrap;
+		background-color: #CCCCCC;
+		text-align:center;
+	}
+
+	.jscalendarDayCell
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		white-space: nowrap;
+		text-align:center;
+	}
+
+	.jscalendarDayCellOver
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		font-weight: bold;
+		white-space: nowrap;
+		text-align:center;
+		color: #0000FF;
+	}
+
+	.jscalendarEmptyCell
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		white-space: nowrap;
+		height: 20;
+	}
+
+	.jslabel
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		color: #000000;
+	}
+
+	.jswidget
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		cursor: default;
+	}
+
+	.jstabrow
+	{
+	}
+
+	.jstabcell_selected
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		color: #000000;
+		border-top: 1px solid #FFFFFF;
+		border-left: 1px solid #FFFFFF;
+		border-right: 1px solid #000000;
+		border-bottom: 2px solid #0000FF;
+		background-color:#EEEEEE;
+		cursor: pointer;
+	}
+
+	.jstabcell_notselected
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		color: #999999;
+		border-top: 1px solid #FFFFFF;
+		border-left: 1px solid #FFFFFF;
+		border-right: 1px solid #000000;
+		border-bottom: 1px solid #EEEEEE;
+		background-color:#EEEEEE;
+		cursor: pointer;
+	}
+
+	.jstabsstack
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		color: #000000;
+		background-color:#EEEEEE;
+		border-bottom: 1px solid #333333;
+		border-right: 1px solid #333333;
+		border-left: 1px solid #FFFFFF;
+		border-top: 1px solid #FFFFFF;
+	}
+
+	.jsstack
+	{
+	}
+
+	.jsstackdiv
+	{
+	}
+
+	.jscombobox
+	{
+	}
+
+	.jslistbox
+	{
+	}
+
+	.spinboxinput
+	{
+	}
+
+	.spinboxbts
+	{
+	}
+
+	.jsdialog
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+		cursor: default;
+		color: #000000;
+		background-color: #DDDDDD;
+		border-top: 1px solid #EEEEEE;
+		border-left: 1px solid #EEEEEE;
+		border-right: 1px solid #000000;
+		border-bottom: 1px solid #000000;
+		padding: 10px;
+	}
+
+	.jsline
+	{
+		border-bottom: 1px solid #EEEEEE;
+		border-right: 1px solid #EEEEEE;
+		border-left: 1px solid #333333;
+		border-top: 1px solid #333333;
+	}
+
+	/*CSS for the Code Editor*/
+
+	.js_code_line_numbers
+	{
+		color: #666666;
+		background-color: #DDDDDD;
+		width: 40px;
+		font-family:monospace;
+		font-size:10px;
+		line-height:16px;
+		margin:0px;
+		padding:0px;
+		white-space:pre;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 10000;
+	}
+
+	.js_code_line_numbers_background
+	{
+		background-color: #DDDDDD;
+		position: absolute;
+		width: 40px;
+		height: 100%;
+		top: 0px;
+		left: 0px;
+	}
+
+	.js_code
+	{
+		font-family:Courier;
+		font-size:12px;
+		line-height:16px;
+		margin:0px;
+		padding:0px;
+		border:0px;
+		outline:0px;
+		white-space:pre;
+	}
+
+	.js_code p, .js_code pre
+	{
+		font-family:Courier;
+		font-size:12px;
+		line-height:16px;
+		margin:0px;
+		padding:0px;
+		white-space:pre;
+	}
+
+	.js_reserved
+	{
+		color: #0000FF;
+	}
+
+	.js_special
+	{
+		color: #FF0000;
+	}
+
+	.js_dbquote, .js_dbquote .js_special, .js_dbquote .js_reserved
+	{
+		color: #009900;
+	}
+
+	.js_quote, .js_quote .js_special, .js_quote .js_reserved
+	{
+		color: #009900;
+	}
+
+	.js_comments, .js_comments .js_reserved, .js_comments .js_special, .js_comments .js_quote, .js_comments .js_dbquote
+	{
+		color: #AAAAAA;
+	}
+
+	.jstooltip
+	{
+		font-family: Verdana, Sans-Serif, Arial, Helvetica;
+		font-size: 10px;
+
+		border: 1px solid #000000;
+		background-color: #FFFFEE;
+
+		position:absolute;
+		top:0;
+		left:0;
+		visibility: hidden;
+		z-index:100000;
+	}
