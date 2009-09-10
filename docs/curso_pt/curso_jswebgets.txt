@@ -1,0 +1,9 @@
+1 - Programação Orientada a Objetos
+2 - Design Patters (Padrões de Projeto)
+3 - Análise Orientada a Objetos
+4 - WirePhrame
+5 - Construção do Wireframe da aplicação
+6 - Modelagem com Jude
+7 - Criação dos objetos POP
+8 - Prototipação com JsDesigner
+9 - Controle usando o padrão COSA
