@@ -366,18 +366,26 @@
 
 		self.disable = function(value)
 		{
-			if (value)
-				self.removeChild(self.textarea);
-			else
-				self.appendChild(self.textarea);
+			try
+			{
+				if (value)
+					self.removeChild(self.textarea);
+				else if (!value)
+					self.appendChild(self.textarea);
+			}
+			catch (err){}
 		};
 
 		self.readOnly = function(value)
 		{
-			if (value)
-				self.removeChild(self.textarea);
-			else
-				self.appendChild(self.textarea);
+			try
+			{
+				if (value)
+					self.removeChild(self.textarea);
+				else if (!value)
+					self.appendChild(self.textarea);
+			}
+			catch (err){}
 		};
 
 		self.editCommand = function(jsEvent)

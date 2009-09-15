@@ -224,18 +224,26 @@
 
 		self.disable = function(value)
 		{
-			if (value && self.textarea.parentNode == self)
-				self.removeChild(self.textarea);
-			else if (!value)
-				self.appendChild(self.textarea);
+			try
+			{
+				if (value)
+					self.removeChild(self.textarea);
+				else if (!value)
+					self.appendChild(self.textarea);
+			}
+			catch (err){}
 		};
 
 		self.readOnly = function(value)
 		{
-			if (value && self.textarea.parentNode == self)
-				self.removeChild(self.textarea);
-			else if (!value)
-				self.appendChild(self.textarea);
+			try
+			{
+				if (value)
+					self.removeChild(self.textarea);
+				else if (!value)
+					self.appendChild(self.textarea);
+			}
+			catch (err){}
 		};
 
 		return self;

@@ -39,18 +39,22 @@
 
 		self.disable = function(value)
 		{
-			if (value)
+			try
 			{
-				self.removeChild(self.iframe);
-				self.style.border = "1px solid #666666";
-				self.style.backgroundColor = "#CCCCCC";
+				if (value)
+				{
+					self.removeChild(self.iframe);
+					self.style.border = "1px solid #666666";
+					self.style.backgroundColor = "#CCCCCC";
+				}
+				else
+				{
+					self.appendChild(self.iframe);
+					self.style.border = "";
+					self.style.backgroundColor = "";
+				}
 			}
-			else
-			{
-				self.appendChild(self.iframe);
-				self.style.border = "";
-				self.style.backgroundColor = "";
-			}
+			catch (err){}
 		};
 
 		self.readOnly = function(value)
