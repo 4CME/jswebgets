@@ -1,6 +1,6 @@
 	/******************************************************************
 	JsWebGets - Web User Interface Library
-	Copyright (C) 2006  Pablo Santiago Sánchez
+	Copyright (C) 2006  Pablo Santiago Sï¿½nchez
 
 	This library is free software; you can redistribute it and/or
 	modify it under the terms of the GNU Lesser General Public
@@ -2061,7 +2061,7 @@
 						interface_code += "\t\t//this will put the widgets accessible on a more OO way\n";
 						interface_code += "\t\tfor (i in self.UIcomponents)\n";
 						interface_code += "\t\t\tself[i] = self.UIcomponents[i];\n";
-						interface_code += "\t}\n\n";
+						interface_code += "\t};\n\n";
 
 						interface_code += "\t/***********************************/\n";
 						interface_code += "\t/***************EVENTS**************/\n";
@@ -2077,7 +2077,7 @@
 
 						for (var i in self.UIcomponents.callbacks_view.childList)
 						{
-							interface_code += "\t\tself.UIcallbacks." + self.UIcomponents.callbacks_view.childList[i].cells[0].getValue() + " = " + self.UIcomponents.callbacks_view.childList[i].code.replace(/\n/g,"\n\t\t") + "\n\n";
+							interface_code += "\t\tself.UIcallbacks." + self.UIcomponents.callbacks_view.childList[i].cells[0].getValue() + " = " + self.UIcomponents.callbacks_view.childList[i].code.replace(/\n/g,"\n\t\t") + ";\n\n";
 						}
 
 						interface_code += "\t\t/************End of User defined**********/\n\n";
@@ -2112,17 +2112,17 @@
 							else
 								handler = "self.UIcomponents." + handler;
 							interface_code += "\t\tself.UIcallbacksHandlers[" + i + "] = new Array();\n";
-							interface_code += "\t\tself.UIcallbacksHandlers[" + i + "][0] = \"" + self.UIcomponents.handlers_view.childList[i].cells[1].getValue() + "\"	//event\n";
-							interface_code += "\t\tself.UIcallbacksHandlers[" + i + "][1] = " + handler + " //handler\n";
-							interface_code += "\t\tself.UIcallbacksHandlers[" + i + "][2] = self.UIcallbacks." + self.UIcomponents.handlers_view.childList[i].cells[2].getValue() + " //callback\n\n";
+							interface_code += "\t\tself.UIcallbacksHandlers[" + i + "][0] = \"" + self.UIcomponents.handlers_view.childList[i].cells[1].getValue() + "\";	//event\n";
+							interface_code += "\t\tself.UIcallbacksHandlers[" + i + "][1] = " + handler + "; //handler\n";
+							interface_code += "\t\tself.UIcallbacksHandlers[" + i + "][2] = self.UIcallbacks." + self.UIcomponents.handlers_view.childList[i].cells[2].getValue() + "; //callback\n\n";
 						}
 
 						interface_code += "\t\tfor (var js_i in self.UIcallbacksHandlers)\n";
 						interface_code += "\t\t{\n";
 						interface_code += "\t\t\tif (self.UIcallbacksHandlers[js_i][0] == \"callback\")\n";
-						interface_code += "\t\t\t\tself.UIcallbacksHandlers[js_i][1].setCallback(self.UIcallbacksHandlers[js_i][2])\n";
+						interface_code += "\t\t\t\tself.UIcallbacksHandlers[js_i][1].setCallback(self.UIcallbacksHandlers[js_i][2]);\n";
 						interface_code += "\t\t\telse\n";
-						interface_code += "\t\t\t\tself.UIcallbacksHandlers[js_i][1].setEvent(self.UIcallbacksHandlers[js_i][0],self.UIcallbacksHandlers[js_i][2])\n";
+						interface_code += "\t\t\t\tself.UIcallbacksHandlers[js_i][1].setEvent(self.UIcallbacksHandlers[js_i][0],self.UIcallbacksHandlers[js_i][2]);\n";
 						interface_code += "\t\t}\n";
 						interface_code += "\t};\n\n";
 

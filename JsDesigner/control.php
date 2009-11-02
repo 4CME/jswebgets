@@ -42,9 +42,9 @@
 		$_SESSION["jsdesigner_control"]= new JsDesignerControl();
 
 	//let's set the path where JsDesigner will save it's files
-	$_SESSION["jsdesigner_control"]->setClassesPath("../../ENAP_PHP/includes/php/interfaces/websco");
+	$_SESSION["jsdesigner_control"]->setClassesPath("../../copiacola/system/app/base/view/");
 	//$_SESSION["jsdesigner_control"]->setClassesPath("./custom_classes/");
-	$_SESSION["jsdesigner_control"]->setExtension("php");
+	$_SESSION["jsdesigner_control"]->setExtension("js");
 
 	//the controle_msg is the method wich should be called by the interface
 	//for each action the controller is supposed to have

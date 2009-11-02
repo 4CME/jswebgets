@@ -2,7 +2,7 @@
 
 	/******************************************************************
 	JsWebGets - Web User Interface Library
-	Copyright (C) 2006  Pablo Santiago Sánchez
+	Copyright (C) 2006  Pablo Santiago Sï¿½nchez
 
 	This library is free software; you can redistribute it and/or
 	modify it under the terms of the GNU Lesser General Public
@@ -19,6 +19,11 @@
 	Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 	******************************************************************/
 
+	header('Last-Modified: '.gmdate("D, d M Y H:i:s").' GMT');
+	header('Cache-Control: no-cache, must-revalidate');		//HTTP/1.1
+	header('Pragma: no-cache');								//HTTP/1.0
+	header('Content-type: text/html; charset=UTF-8');
+
 ?>
 <html>
 	<head>
@@ -28,7 +33,7 @@
 	<script>
 
 		//prevents the window to be closed accidentally by the user
-		/** /
+		/**/
 		window.onbeforeunload = function(e)
 		{
 			if (!e)
@@ -92,13 +97,13 @@
 
 		splashtitle = new JsLabel();
 		splashtitle.setHeight(40);
-		splashtitle.setFontSize(30);
+		splashtitle.setFontSize(20);
 		splashtitle.setFontWeight("bold");
 		splashtitle.setValue("JsDesigner");
 		splashtitle.setXPos(150);
 		splashtitle.setYPos(20);
 
-		splashtextstring  = 'Copyright 2006 - Pablo Santiago Sánchez\n';
+		splashtextstring  = 'Copyright 2006 - Pablo Santiago SÃ¡nchez\n';
 		splashtextstring += '\n';
 		splashtextstring += 'JsDesigner is Free Software released under the GNU GPL.\n';
 		splashtextstring += '\n';
@@ -118,7 +123,7 @@
 		splash.addItem(splashtitle)
 		splash.addItem(splashtext)
 
-		//splash.showDialog();
+		splash.showDialog();
 
 		window.setTimeout("splash.hideDialog()",2000);
 
