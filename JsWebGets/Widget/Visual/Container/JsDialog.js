@@ -58,7 +58,7 @@
 			{
  				if (browserType=="ie")
  					self.style.height = parseInt(value) + 26;
- 				else 
+ 				else
 					self.style.height = parseInt(value);
 			}
 			else
@@ -73,7 +73,7 @@
 			{
  				if (browserType=="ie")
  					self.style.width = parseInt(value) + 16;
- 				else 
+ 				else
 					self.style.width = parseInt(value);
 			}
 			else
@@ -134,18 +134,22 @@
 			*/
 		};
 
-		self.showDialog = function()
+		self.showDialog = function(retop)
 		{
 			if (self.modal)
 			{
 				document.body.appendChild(self.modalFrame);
+                self.modalFrame.style.zIndex = 2;
 				self.modalFrame.style.position = "absolute";
 				self.modalFrame.style.display = "block";
 				self.modalFrame.style.visibility = "visible";
+				self.style.zIndex = 3;
 			}
 
-			if (!self.parentNode || !self.parentNode.innerHTML)
-				document.body.appendChild(self);
+			if (!self.parentNode || !self.parentNode.innerHTML || retop) {
+                document.body.appendChild(self);
+                console.log('yeee')
+            }
 
 			if (self.modal)
 				self.parentNode.appendChild(self.modalFrame);

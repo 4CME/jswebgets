@@ -1418,7 +1418,7 @@
 							if (currDialog)
 								currDialog.hideDialog();
 							currDialog = self.UIcomponents.newdialog;
-							self.UIcomponents.newdialog.showDialog();
+							self.UIcomponents.newdialog.showDialog(true);
 							self.delItem(currInterface);
 							self.UIcomponents.obj_view.clearData();
 							self.UIcomponents.prop_view.clearData();
@@ -1432,7 +1432,7 @@
 						if (currDialog)
 							currDialog.hideDialog();
 						currDialog = self.UIcomponents.newdialog;
-						self.UIcomponents.newdialog.showDialog();
+						self.UIcomponents.newdialog.showDialog(true);
 					}
 				}
 
@@ -1474,7 +1474,7 @@
 								currDialog.hideDialog();
 							currDialog = self.UIcomponents.opendialog;
 
-							self.UIcomponents.opendialog.showDialog();
+							self.UIcomponents.opendialog.showDialog(true);
 							document.body.request.setFieldValue("control_msg","loadInterfacesList");
 							document.body.request.postData(self.loadInterfaceOpenList);
 							self.delItem(currInterface);
@@ -1492,7 +1492,7 @@
 						if (currDialog)
 							currDialog.hideDialog();
 						currDialog = self.UIcomponents.opendialog;
-						self.UIcomponents.opendialog.showDialog();
+						self.UIcomponents.opendialog.showDialog(true);
 						document.body.request.setFieldValue("control_msg","loadInterfacesList");
 						document.body.request.postData(self.loadInterfaceOpenList);
 					}
@@ -1705,7 +1705,7 @@
 							currDialog.hideDialog();
 						currDialog = self.UIcomponents.savedialog;
 
-						self.UIcomponents.savedialog.showDialog();
+						self.UIcomponents.savedialog.showDialog(true);
 						document.body.request.setFieldValue("control_msg","loadInterfacesList");
 						document.body.request.postData(self.loadInterfaceSaveList);
 					}
@@ -3055,7 +3055,7 @@
 					{
 						if (self.UIcomponents.callbacks_view.selectedItem)
 						{
-							self.UIcomponents.codeeditorwindow.showDialog();
+							self.UIcomponents.codeeditorwindow.showDialog(true);
 							currDialog = self.UIcomponents.codeeditorwindow;
 							self.UIcomponents.codeeditor.setValue(self.UIcomponents.callbacks_view.selectedItem.code);
 							self.UIcomponents.codeeditorname.setValue(self.UIcomponents.callbacks_view.selectedItem.getValue()[0]);
@@ -3303,7 +3303,7 @@
 				{
 					if (jsTarget.getValue() == "jsdesigner_addimage")
 					{
-						self.UIcomponents.file_select_dialog.showDialog();
+						self.UIcomponents.file_select_dialog.showDialog(true);
 						currIconComboTarget.setValue();
 					}
 				};
@@ -3341,7 +3341,7 @@
 				self.UIcallbacks.show_menu_dialog = function(jsEvent)
 				{
 					currDialog = self.UIcomponents.menu_dialog;
-					self.UIcomponents.menu_dialog.showDialog();
+					self.UIcomponents.menu_dialog.showDialog(true);
 				};
 
 				//Toolbar Dialog methods
@@ -3375,7 +3375,7 @@
 					}
 
 					currDialog = self.UIcomponents.toolbar_dialog;
-					self.UIcomponents.toolbar_dialog.showDialog();
+					self.UIcomponents.toolbar_dialog.showDialog(true);
 				};
 
 				self.UIcallbacks.load_button_data = function(jsEvent)
@@ -3468,7 +3468,7 @@
 					}
 
 					currDialog = self.UIcomponents.listdata_dialog;
-					self.UIcomponents.listdata_dialog.showDialog();
+					self.UIcomponents.listdata_dialog.showDialog(true);
 				};
 
 				self.UIcallbacks.load_column_data = function(jsEvent)
